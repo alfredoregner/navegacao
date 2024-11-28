@@ -6,6 +6,38 @@
     <title>Calculadora de Gorjeta</title>
 </head>
 <body>
-    
+    <h1>Calculadora de Gorjeta</h1>
+
+    <p>Insira o valor da conta</p>
+    <input type="number" class="conta" placeholder="Valor da conta"><br><br>
+    <p>Insira sua avaliação (excelente, ótimo ou bom) </p>
+    <input type="text" class="avaliacao" placeholder="Avaliação"><br><br>
+    <button onclick="calcular()">Enviar</button>
+
+    <script>
+        function calcular(){
+            let conta = parseFloat(document.querySelector(".conta").value);
+            let avaliacao = document.querySelector(".avaliacao").value;
+
+            if(avaliacao == "excelente"){
+                let gorjeta = conta * 0.20;
+                let total = conta + gorjeta;
+
+                alert(`Gorjeta R$${gorjeta}\nTotal R$${total}`);
+            }else if (avaliacao == "ótimo"){
+                let gorjeta = conta * 0.15;
+                let total = conta + gorjeta;
+
+                alert(`Gorjeta R$${gorjeta}\nTotal R$${total}`);
+            }else if (avaliacao == "bom"){
+                let gorjeta = conta * 0.10;
+                let total = conta + gorjeta;
+
+                alert(`Gorjeta R$${gorjeta}\nTotal R$${total}`);
+            }else{
+                alert(`Não tem gorjeta. Valor final da conta R$${conta}`);
+            }
+        }
+    </script>
 </body>
 </html>

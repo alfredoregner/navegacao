@@ -6,6 +6,25 @@
     <title>Saudação de Acordo com a Hora</title>
 </head>
 <body>
-    
+    <h1>Saudação</h1>
+    <p>Descubra se é manhã, tarde ou noite</p>
+
+    <button onclick="hora()">Verificar</button>
+
+    <script>
+
+        function hora(){
+            let dia = getHours(dia)
+
+            if(dia >= 5 && dia < 12){
+                alert("Bom dia!");
+            }else if (dia >= 12 && dia < 18){
+                alert("Boa tarde!");
+            }else {
+                alert("Boa noite!");
+            }
+        }
+
+    </script>
 </body>
 </html>

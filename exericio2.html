@@ -6,6 +6,23 @@
     <title>Verificação de Ano Bissexto</title>
 </head>
 <body>
-    
+    <h1>Verificação de Ano Bissexto</h1>
+    <p>Insira um ano</p>
+
+    <input type="number" class="ano" placeholder="Digite um ano">
+    <button onclick="bissexto()">Enviar</button>
+
+    <script>
+        function bissexto(){
+            let ano = parseInt(document.querySelector(".ano").value);
+        
+            if(ano % 4 == 0){
+                alert(`${ano} é um ano bissexto`)
+            }else{
+                alert(`${ano} não é um ano bissexto`)
+            }
+        }
+        
+    </script>
 </body>
 </html>
