@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora de Média Escolar</title>
 </head>
 <body>
-    
+    <h1>Media Escolar</h1>
+    <p>Insira as notas das provas</p>
+
+    <input type="number" class="nota1" placeholder="Prova 1"><br><br>
+    <input type="number" class="nota2" placeholder="Prova 2"><br><br>
+    <input type="number" class="nota3" placeholder="Prova 3"><br><br>
+    <input type="number" class="nota4" placeholder="Prova 4"><br><br>
+    <button onclick="nota()">Enviar notas</button>
+
+    <script>
+        function nota(){
+            let nota1 = parseFloat(document.querySelector(".nota1").value);
+            let nota2 = parseFloat(document.querySelector(".nota2").value);
+            let nota3 = parseFloat(document.querySelector(".nota3").value);
+            let nota4 = parseFloat(document.querySelector(".nota4").value);
+
+            let media = ((nota1 + nota2 + nota3 + nota4) / 4);
+
+            if(media > 10){
+                alert(`A média do aluno não pode ser maior que 10! \nMédia: ${media.toFixed(2)}`);
+
+            }else if(media.toFixed(2) <=10 && media.toFixed(2) >=7){
+                alert(`Aprovado \nMédia: ${media.toFixed(2)}`);
+
+            }else if(media.toFixed(2) <7 && media.toFixed(2) >= 5){
+                alert(`Recuperação \nMédia: ${media.toFixed(2)}`);
+
+            }else if(media.toFixed(2) < 5 && media.toFixed(2) >= 0){
+                alert(`Reprovado \nMédia: ${media.toFixed(2)}`);
+
+            }else{
+                alert(`A média do aluno não pode ser menor que 0! \nMédia: ${media.toFixed(2)}`);
+
+            }
+            window.location.reload();
+        }
+    </script>
 </body>
 </html>

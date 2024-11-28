@@ -1,11 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jogo de Advinhação</title>
 </head>
 <body>
-    
+    <h1>Jogo de Advinhação</h1>
+    <p>Advinhe o número entre 1 e 10</p>
+
+    <input type="number" class="numVariavel" placeholder="Digite um número de 1 a 10">
+    <button onclick="verificar()">Enviar</button>
+    <script>
+        function verificar(){
+
+            let numVariavel = parseInt(document.querySelector(".numVariavel").value);
+            let numSecreto = Math.floor(Math.random()*10) +1; //Math.floor Arredonda o valor da variável. Math.round também funciona (casas decimais são arredondadas para o mais próximo)
+
+            if(numSecreto != numVariavel){
+                alert(`Tente novamente!\nNúmero secreto: ${numSecreto}. \nPalpite: ${numVariavel}`);
+                window.location.reload();
+            } else{
+                alert(`Parabéns, você acertou!\nNúmero secreto: ${numSecreto}. \nPalpite: ${numVariavel}`);
+            }
+        }
+        
+    </script>
+
 </body>
 </html>
