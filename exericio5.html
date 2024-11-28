@@ -14,9 +14,9 @@
     <script>
 
         function hora(){
-            let dia = getHours(dia)
+            let dia = new Date().getHours()
 
-            if(dia >= 5 && dia < 12){
+            if(dia >= 6 && dia < 12){
                 alert("Bom dia!");
             }else if (dia >= 12 && dia < 18){
                 alert("Boa tarde!");
