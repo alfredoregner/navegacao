@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>
     <title>Verificação de Ano Bissexto</title>
 </head>
 <body>
@@ -12,17 +13,5 @@
     <input type="number" class="ano" placeholder="Digite um ano">
     <button onclick="bissexto()">Enviar</button>
 
-    <script>
-        function bissexto(){
-            let ano = parseInt(document.querySelector(".ano").value);
-        
-            if(ano % 4 == 0){
-                alert(`${ano} é um ano bissexto`)
-            }else{
-                alert(`${ano} não é um ano bissexto`)
-            }
-        }
-        
-    </script>
 </body>
 </html>

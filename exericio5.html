@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>
     <title>Saudação de Acordo com a Hora</title>
 </head>
 <body>
@@ -11,20 +12,5 @@
 
     <button onclick="hora()">Verificar</button>
 
-    <script>
-
-        function hora(){
-            let dia = new Date().getHours()
-
-            if(dia >= 6 && dia < 12){
-                alert("Bom dia!");
-            }else if (dia >= 12 && dia < 18){
-                alert("Boa tarde!");
-            }else {
-                alert("Boa noite!");
-            }
-        }
-
-    </script>
 </body>
 </html>
