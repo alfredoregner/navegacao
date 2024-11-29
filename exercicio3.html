@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
     <script src="js/script.js"></script>
     <title>Calculadora de Média Escolar</title>
 </head>
 <body>
     <button onclick="home()">Página Inicial</button>
     
-    <h1>Media Escolar</h1>
-    <p>Insira as notas das provas</p>
-
-    <input type="number" class="nota1" placeholder="Prova 1"><br><br>
-    <input type="number" class="nota2" placeholder="Prova 2"><br><br>
-    <input type="number" class="nota3" placeholder="Prova 3"><br><br>
-    <input type="number" class="nota4" placeholder="Prova 4"><br><br>
-    <button onclick="nota()">Enviar notas</button>
+    <div class="painel">
+        <h1>Media Escolar</h1>
+        <p>Insira as notas das provas</p>
+    
+        <p>Prova 1</p>
+        <input type="number" class="nota1" placeholder="Prova 1">
+        <p>Prova 2</p>
+        <input type="number" class="nota2" placeholder="Prova 2">
+        <p>Prova 3</p>
+        <input type="number" class="nota3" placeholder="Prova 3">
+        <p>Prova 4</p>
+        <input type="number" class="nota4" placeholder="Prova 4">
+        <button onclick="nota()">Enviar notas</button>
+    </div>
+    
 
 </body>
 </html>

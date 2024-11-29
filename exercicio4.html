@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
     <script src="js/script.js"></script>
     <title>Calculadora de Gorjeta</title>
 </head>
 <body>
     <button onclick="home()">Página Inicial</button>
     
-    <h1>Calculadora de Gorjeta</h1>
+    <div class="painel">
+        <h1>Calculadora de Gorjeta</h1>
 
-    <p>Insira o valor da conta</p>
-    <input type="number" class="conta" placeholder="Valor da conta"><br><br>
-    <p>Insira sua avaliação (excelente, ótimo ou bom) </p>
-    <input type="text" class="avaliacao" placeholder="Avaliação"><br><br>
-    <button onclick="calcular()">Enviar</button>
+        <p>Insira o valor da conta</p>
+        <input type="number" class="conta" placeholder="Valor da conta">
+        <p>Insira sua avaliação (excelente, ótimo ou bom) </p>
+        <input type="text" class="avaliacao" placeholder="Avaliação">
+        <button onclick="calcular()">Enviar</button>
+    </div>
 
 </body>
 </html>

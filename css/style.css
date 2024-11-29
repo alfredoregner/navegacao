@@ -1,0 +1,41 @@
+body{
+    height: 98.3vh;
+    position: relative;
+    display: block;
+    align-content: center;
+    justify-items: center;
+    background: url('https://t2.tudocdn.net/646950?w=1920');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+button{
+    height: 40px;
+    width: 220px;
+    color: black;
+    background-color: white;
+    border-color: red;
+    border-radius: 10px;
+}
+
+button:hover{
+    color: white;
+    background-color:red;
+    border-color: black;
+}
+
+.painel{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.6);
+  border: 5px solid rgb(255, 0, 0);
+  padding: 2rem;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  align-items: center;
+}
