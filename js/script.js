@@ -1,4 +1,7 @@
 // Direcionamentos
+function home(){
+    window.location = "index.html";
+}
 function ex1(){
     window.location = "exercicio1.html";
 }
@@ -14,9 +17,10 @@ function ex4(){
 function ex5(){
     window.location = "exercicio5.html";
 }
-function home(){
-    window.location = "index.html";
+function ex6(){
+    window.location = "exercicio6.html";
 }
+
 
 // Exercício 1
 function verificar(){
@@ -108,5 +112,30 @@ function hora(){
         alert("Boa tarde!");
     }else {
         alert("Boa noite!");
+    }
+}
+
+// Exercício 6
+function senha(){
+    let senha = "JavaScript123";
+    let validar = document.querySelector(".validar").value;
+
+    console.log(validar.length)
+
+    if(validar == senha){
+        alert(`SENHA CORRETA!`);
+    } else if(validar.length >= 8 && validar != senha){
+        alert(`SENHA INCORRETA!`)
+    } else{
+        alert(`SENHA INVÁLIDA! Senha contém mais do que 8 caracteres`)
+    }
+}
+
+function mostrarSenha(){
+    let mostrarSenha = document.querySelector(".validar");
+    if(mostrarSenha.type == "password"){
+        mostrarSenha.type = 'text';
+    }else{
+        mostrarSenha.type = 'password';
     }
 }
