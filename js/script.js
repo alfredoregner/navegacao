@@ -119,15 +119,21 @@ function hora(){
 function senha(){
     let senha = "JavaScript123";
     let validar = document.querySelector(".validar").value;
-
-    console.log(validar.length)
+    let resultado = document.createElement("h3");
+    let campoResultado = document.querySelector("#resultado");
 
     if(validar == senha){
-        alert(`SENHA CORRETA!`);
+        resultado = `SENHA CORRETA!`;
+        campoResultado.innerHTML= resultado;
+        campoResultado.classList.replace("oculto", "visivel");
     } else if(validar.length >= 8 && validar != senha){
-        alert(`SENHA INCORRETA!`)
+        resultado = `SENHA INCORRETA!`;
+        campoResultado.innerHTML= resultado;
+        campoResultado.classList.replace("oculto", "visivel");
     } else{
-        alert(`SENHA INVÁLIDA! Senha contém mais do que 8 caracteres`)
+        resultado = `SENHA INVÁLIDA! Senha contém mais do que 8 caracteres`;
+        campoResultado.innerHTML= resultado;
+        campoResultado.classList.replace("oculto", "visivel");
     }
 }
 
