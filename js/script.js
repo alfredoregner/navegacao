@@ -145,3 +145,28 @@ function mostrarSenha(){
         mostrarSenha.type = 'password';
     }
 }
+
+//Desafio for
+function receita(){
+    let checkboxes = document.querySelectorAll('input[type="checkbox"]')
+    let showSelectedBtn = document.getElementById('show-selected')
+    let resultDiv = document.getElementById('result')
+    
+    showSelectedBtn.addEventListener('click', () => {
+        let selectedIngredients = [] 
+    
+        function verificaCheckbox(checkbox) {
+            if (checkbox.checked) {
+                selectedIngredients.push(checkbox.value) 
+            }
+        }
+    
+        checkboxes.forEach(verificaCheckbox)
+        
+        if (selectedIngredients.length > 0) {
+            resultDiv.textContent = `Ingredientes para a receita: ${selectedIngredients.join(', ')}`
+        } else {
+            resultDiv.textContent = 'Nenhum ingrediente foi selecionado.'
+        }
+    })
+}
